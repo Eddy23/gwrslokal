@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+/htdocs/fileadmin/user_upload
+/htdocs/fileadmin/_temp_
+/htdocs/uploads/
+/htdocs/typo3/
+/htdocs/typo3temp/
+/htdocs/typo3conf/LocalConfiguration.php
+
+.idea
+
+.vagrant
+
+/vhosts/
