@@ -6,6 +6,11 @@
 /htdocs/typo3temp/
 /htdocs/typo3conf/LocalConfiguration.php
 
+# Symlinks nicht berücksichtigen
+/htdocs/index.php
+/htdocs/typo3
+/htdocs/typo3_src
+
 .idea
 
 .vagrant
