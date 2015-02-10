@@ -1,3 +1,16 @@
+body {
+    background-color: #FED74F;
+}
+
+.header-bar {
+    background-color: #552F1C;
+    height: 10px;
+}
+
+#mainnavi-bar {
+    padding-right: 0;
+}
+
 .container-fluid {
     max-width: 1230px;
     margin: 0 auto;
@@ -13,13 +26,19 @@
     margin-bottom: 0;
 }
 
+.background-white {
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .sidebar-nav .navbar-header {
     float: none;
     font-size: 16px;
 }
 
 .gwrsheader {
-    height: 110px;
+    height: 130px;
     border: 1px solid #000000;
     padding-left: 0;
     background: url("../img/bg_stripes.png");
@@ -45,8 +64,21 @@ article {
     margin-bottom: 10px;
 }
 
+.maincontent {
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.maincontent .gwrsnews {
+    padding-right: 0;
+}
+
 .mainnavi {
-    margin-top: 23px;
+    float: right;
+    height: 86px;
+    padding-top: 18px;
+    text-align: right;
 }
 
 .mainnavi ul {
@@ -54,7 +86,7 @@ article {
 }
 
 .mainnavi li {
-    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .mainnavi li a {
@@ -70,6 +102,14 @@ article {
     margin-bottom: 6px;
 }
 
+.sidebar-left {
+    padding-left: 0;
+}
+
+.navbar-collapse {
+    padding-right: 0;
+}
+
 .navbar-default {
     background-color: transparent;
     border-color: #e7e7e7;
@@ -77,6 +117,7 @@ article {
 
 .form-horizontal {
     margin-top: 30px;
+    padding-left: 15px;
 }
 
 .form-horizontal h3 {
@@ -93,8 +134,30 @@ article {
     padding-left: 15px;
 }
 
+.content-img-left {
+    margin-right: 30px;
+}
+
+.content-img-right {
+    margin-left: 30px;
+}
+
+.content-text-right {
+    padding-right: 50px;
+}
+
+.content-main-header {
+    margin-top: 0;
+}
+
+.content-header {
+    /*	color: red; */
+    font-size: 18px;
+}
+
 .footer {
-    background: url("../img/bg_stripes.png");
+    clear:both;
+    background-color: #ff0000;
     height: 40px;
     margin-top: 40px;
 }
@@ -108,8 +171,9 @@ article {
 @media only screen and (min-width: 768px) {
     .gwrslogo {
         background: url("../img/testlogo_tablet.jpg");
-        height: 90px;
-        width: 130px;
+        height: 75px;
+        width: 200px;
+        float: left;
         margin-top: 5px;
     }
 
@@ -154,18 +218,30 @@ article {
         margin-left: 0;
         padding-left: 0;
     }
+
+    #mainnavi-bar {
+        float: right;
+    }
+
+    .mainnavi li {
+        margin-left: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .gwrslogo {
         background: url("../img/testlogo_smartphone.jpg");
-        height: 90px;
-        width: 130px;
-        margin-top: 5px;
+        height: 75px;
+        margin: 5px auto 15px;
+        width: 200px;
     }
 
     .gwrsheader {
-        background-color: #8aff27;
+        display: none;
+    }
+
+    .header-bar {
+        display: none;
     }
 
     .breadcrumb {
@@ -174,6 +250,17 @@ article {
 
     .caret {
         margin-left: 10px;
+    }
+
+    #mainnavi-bar {
+        padding-right: 15px;
+        float: none;
+    }
+
+    .mainnavi {
+        float: none;
+        height: inherit;
+        text-align: left;
     }
 
     .mainnavi ul {
@@ -285,6 +372,10 @@ article {
         padding-left: 0;
     }
 
+    .sidebar-left {
+        padding-left: 15px;
+    }
+
     .sidebar-nav ul li {
         list-style: none;
     }
@@ -359,6 +450,10 @@ article {
         padding-right: 30px;
     }
 
+    .content-main-header {
+        text-align: center;
+    }
+
     .footer {
         display: none;
     }
@@ -367,26 +462,45 @@ article {
 @media only screen and (min-width: 992px) {
     .gwrslogo {
         background: url("../img/testlogo_desktop.jpg");
-        height: 90px;
-        width: 130px;
+        height: 75px;
+        width: 200px;
+        float: left;
         margin-top: 5px;
     }
 
     .gwrsheader {
         background-color: #ffff00;
     }
+
+    #mainnavi-bar {
+        float: right;
+    }
+
+    .mainnavi li {
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .gwrslogo {
         background: url("../img/testlogo_large_desktop.jpg");
-        height: 90px;
-        width: 130px;
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 75px;
         margin-top: 5px;
     }
 
     .gwrsheader {
         background-color: #849BFF;
+    }
+
+    #mainnavi-bar {
+        float: right;
+    }
+
+    .mainnavi li {
+        margin-left: 20px;
     }
 }
 
@@ -398,7 +512,7 @@ article {
 }
 
 .col-xs-12 {
-    background-color: #fff;
+    /*		background-color: #fff; */
 }
 
 #sidebar {
@@ -414,10 +528,4 @@ article {
 #sidebar li {
     border: 0 #f2f2f2 solid;
     border-bottom-width: 1px;
-}
-
-
-
-#test23 {
-    font-size: 12px;
 }

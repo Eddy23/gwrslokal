@@ -1,3 +1,107 @@
+<div class="header-bar"></div>
 <div class="container-fluid">
-    <f:render section="main"/>
+    <div class="gwrslogo"></div>
+    <div id="mainnavi-bar" class="col-lg-9 col-md-9 col-sm-8">
+        <div class="mainnavi">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".sidebar-navbar-collapse23">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="visible-xs navbar-brand">Hauptnavigation</span>
+                </div>
+                <div class="navbar-collapse collapse sidebar-navbar-collapse23">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Hauptnavi 1</a></li>
+                        <li><a href="#">Hauptnavi 2</a></li>
+                        <li><a href="#">Hauptnavi 3</a></li>
+                        <li><a href="#">Hauptnavi 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gwrsheader col-lg-12 col-md-12 col-sm-12"></div>
+    <ol class="breadcrumb col-lg-12 col-md-12 col-sm-12">
+        Sie befinden sich hier:
+        <li><a href="#">Seite 2.2</a></li>
+        <li class="active">Seite 2.2.3</li>
+    </ol>
+
+    <div class="maincontent col-lg-12 col-md-12 col-sm-12">
+        <div class="col-sm-2 col-lg-2 col-md-2 sidebar-left">
+            <div class="sidebar-nav">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".sidebar-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="visible-xs navbar-brand">Seitennavigation</span>
+                    </div>
+                    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <h4>Bereich 1</h4>
+                            <li>
+                                <ul>
+                                    <li><a href="#">Seite 1.1</a></li>
+                                    <li><a href="#">Seite 1.2</a></li>
+                                </ul>
+                            </li>
+                            <h4>Bereich 2</h4>
+                            <li>
+                                <ul>
+                                    <li><a href="#">Seite 2.1</a></li>
+                                    <li><a href="#" data-toggle="collapse" data-target="#sub22">Seite 2.2<span
+                                            class="caret"></span></a>
+                                        <ul class="nav collapse" id="sub22">
+                                            <li><a href="#">Seite 2.2.1</a></li>
+                                            <li><a href="#">Seite 2.2.2</a></li>
+                                            <li><a href="#">Seite 2.2.3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Seite 2.3</a></li>
+                                </ul>
+                            </li>
+                            <h4>Bereich 3</h4>
+                            <li>
+                                <ul>
+                                    <li><a href="#">Seite 3.1</a></li>
+                                    <li><a href="#">Seite 3.2</a></li>
+                                </ul>
+                            </li>
+                            <h4>Bereich 4</h4>
+                            <li>
+                                <ul>
+                                    <li><a href="#">Seite 4.1</a></li>
+                                    <li><a href="#">Seite 4.2</a></li>
+                                    <li><a href="#" data-toggle="collapse" data-target="#sub43">Seite 4.3<span
+                                            class="caret"></span></a>
+                                        <ul class="nav collapse" id="sub43">
+                                            <li><a href="#">Seite 4.3.1</a></li>
+                                            <li><a href="#">Seite 4.3.2</a></li>
+                                            <li><a href="#">Seite 4.3.2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Seite 4.4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <f:render section="main"/>
+    </div>
+    <div class="footer">
+        <p class="text-center"> Enzweihinger Schule - Copyright 2015</p>
+    </div>
 </div>
