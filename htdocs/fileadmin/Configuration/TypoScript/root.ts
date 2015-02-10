@@ -35,6 +35,14 @@ tmpl.zweispaltig {
 }
 
 
+tmpl.startseite < tmpl.einspaltig
+tmpl.startseite {
+    template.file = fileadmin/Resources/Private/Templates/Startseite.html
+    variables {
+        news < styles.content.getRight
+    }
+}
+
 page = PAGE
 page {
     meta < tmpl.meta
@@ -59,5 +67,6 @@ page {
         default.value = Bitte Backend-layout auswählen!
         1 < tmpl.einspaltig
         2 < tmpl.zweispaltig
+        3 < tmpl.startseite
     }
 }

@@ -5,6 +5,7 @@
 /htdocs/typo3/
 /htdocs/typo3temp/
 /htdocs/typo3conf/LocalConfiguration.php
+/htdocs/typo3conf/ext/
 
 # Symlinks nicht berücksichtigen
 /htdocs/index.php
