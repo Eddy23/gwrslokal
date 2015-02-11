@@ -1,10 +1,13 @@
 body {
     background-color: #FED74F;
+    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .header-bar {
     background-color: #552F1C;
     height: 10px;
+    height: 1rem;
 }
 
 #mainnavi-bar {
@@ -13,39 +16,50 @@ body {
 
 .container-fluid {
     max-width: 1230px;
+    max-width: 123rem;
     margin: 0 auto;
 }
 
 .breadcrumb {
     background-color: #f5f5f5;
     border: 1px solid black;
+    border: 0.1rem solid black;
     border-radius: 4px;
+    border-radius: 0.4rem;
     list-style: outside none none;
     margin-top: -12px;
+    margin-top: -1.2rem;
     padding-bottom: 5px;
+    padding-bottom: 0.5rem;
     margin-bottom: 0;
 }
 
 .background-white {
     background-color: #FFFFFF;
     padding-top: 10px;
+    padding-top: 1rem;
     padding-bottom: 10px;
+    padding-bottom: 1rem;
 }
 
 .sidebar-nav .navbar-header {
     float: none;
     font-size: 16px;
+    font-size: 1.6rem;
 }
 
 .gwrsheader {
     height: 130px;
+    height: 13rem;
     border: 1px solid #000000;
+    border: 0.1rem solid #000000;
     padding-left: 0;
-    background: url("../img/bg_stripes.png");
+/*    background: url("../img/bg_stripes.png"); */
 }
 
 .gwrsnews section {
     margin-bottom: 25px;
+    margin-bottom: 2.5rem;
 }
 
 .gwrsnews section h4 {
@@ -54,18 +68,22 @@ body {
 
 .img-gwrs {
     margin-bottom: 20px;
-
+    margin-bottom: 2rem;
 }
 
 article {
     height: 100px;
+    height: 10rem;
     border: 1px solid grey;
+    border: 0.1rem solid grey;
     background-color: rgba(209, 161, 213, 0.76);
     margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .maincontent {
     margin-top: 20px;
+    margin-top: 2rem;
     padding-left: 0;
     padding-right: 0;
 }
@@ -77,7 +95,9 @@ article {
 .mainnavi {
     float: right;
     height: 86px;
+    height: 8.6rem;
     padding-top: 18px;
+    padding-top: 1.8rem;
     text-align: right;
 }
 
@@ -87,6 +107,7 @@ article {
 
 .mainnavi li {
     margin-left: 30px;
+    margin-left: 3rem;
 }
 
 .mainnavi li a {
@@ -100,6 +121,7 @@ article {
 .mainnavi .navbar-default {
     border: none;
     margin-bottom: 6px;
+    margin-bottom: 0.6rem;
 }
 
 .sidebar-left {
@@ -117,13 +139,16 @@ article {
 
 .form-horizontal {
     margin-top: 30px;
+    margin-top: 3rem;
     padding-left: 15px;
+    padding-left: 1.5rem;
 }
 
 .form-horizontal h3 {
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 .event-header, .news-header {
@@ -132,18 +157,22 @@ article {
 
 .news-header {
     padding-left: 15px;
+    padding-left: 1.5rem;
 }
 
 .content-img-left {
     margin-right: 30px;
+    margin-right: 3rem;
 }
 
 .content-img-right {
     margin-left: 30px;
+    margin-left: 3rem;
 }
 
 .content-text-right {
     padding-right: 50px;
+    padding-right: 5rem;
 }
 
 .content-main-header {
@@ -153,18 +182,22 @@ article {
 .content-header {
     /*	color: red; */
     font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .footer {
     clear:both;
     background-color: #ff0000;
     height: 40px;
+    height: 4rem;
     margin-top: 40px;
+    margin-top: 4rem;
 }
 
 .footer p {
     color: #ffffff;
     margin-top: -9px;
+    margin-top: -0.9rem;
 }
 
 /* make sidebar nav vertical */
@@ -172,9 +205,12 @@ article {
     .gwrslogo {
         background: url("../img/testlogo_tablet.jpg");
         height: 75px;
+        height: 7.5rem;
         width: 200px;
+        width: 20rem;
         float: left;
         margin-top: 5px;
+        margin-top: 0.5rem;
     }
 
     .gwrsheader {
@@ -203,8 +239,11 @@ article {
 
     .sidebar-nav .navbar li a {
         padding-top: 4px;
+        padding-top: 0.4rem;
         padding-bottom: 4px;
-        font-size: 110%;
+        padding-bottom: 0.4rem;
+        font-size: 15px;
+        font-size: 1.5rem;
     }
 
     .sidebar-nav .navbar li a:hover,
@@ -232,8 +271,11 @@ article {
     .gwrslogo {
         background: url("../img/testlogo_smartphone.jpg");
         height: 75px;
+        height: 7.5rem;
         margin: 5px auto 15px;
+        margin: 0.5rem auto 1.5rem;
         width: 200px;
+        width: 20rem;
     }
 
     .gwrsheader {
@@ -250,10 +292,12 @@ article {
 
     .caret {
         margin-left: 10px;
+        margin-left: 1rem;
     }
 
     #mainnavi-bar {
         padding-right: 15px;
+        padding-right: 1.5rem;
         float: none;
     }
 
@@ -270,6 +314,7 @@ article {
     .mainnavi li {
         margin: 0;
         border-bottom: 2px solid #999999;
+        border-bottom: 0.2rem solid #999999;
     }
 
     .mainnavi li a {
@@ -282,6 +327,7 @@ article {
 
     .mainnavi .navbar-header {
         border: 1px solid #e7e7e7;
+        border: 0.1rem solid #e7e7e7;
     }
 
     .navbar-nav {
@@ -336,7 +382,9 @@ article {
         color: #ddd;
         background: linear-gradient(#3E3E3E, #383838);
         border-top: 1px solid #484848;
+        border-top: 0.1rem solid #484848;
         border-bottom: 1px solid #2E2E2E;
+        border-bottom: 0.1rem solid #2E2E2E;
     }
 
     #sidebar .nav > li:first-child {
@@ -349,6 +397,7 @@ article {
 
     #sidebar .nav > li > a > img {
         max-width: 14px;
+        max-width: 1.4rem;
     }
 
     #sidebar .nav > li > a:hover, #sidebar .nav > li > a:focus {
@@ -374,6 +423,7 @@ article {
 
     .sidebar-left {
         padding-left: 15px;
+        padding-left: 1.5rem;
     }
 
     .sidebar-nav ul li {
@@ -389,9 +439,13 @@ article {
     .sidebar-nav ul li ul li {
         margin: 0;
         border-bottom: 2px solid #999999;
+        border-bottom: 0.2rem solid #999999;
         padding-left: 15px;
+        padding-left: 1.5rem;
         padding-top: 10px;
+        padding-top: 1rem;
         padding-bottom: 10px;
+        padding-bottom: 1rem;
     }
 
     .sidebar-nav ul li ul li a {
@@ -406,13 +460,17 @@ article {
     .sidebar-nav ul li ul li ul {
         background-color: #888888;
         margin-bottom: -12px;
+        margin-bottom: -1.2rem;
         margin-left: -15px;
+        margin-left: -1.5rem;
         margin-top: 11px;
+        margin-top: 1.1rem;
         padding-bottom: 0;
     }
 
     .sidebar-nav ul li ul li ul li {
         border-bottom: 2px solid #999999;
+        border-bottom: 0.2rem solid #999999;
         padding-left: 0;
         padding-top: 0;
         padding-bottom: 0;
@@ -424,7 +482,9 @@ article {
 
     .form-horizontal {
         padding-left: 15px;
+        padding-left: 1.5rem;
         padding-right: 15px;
+        padding-right: 1.5rem;
     }
 
     .form-horizontal h3 {
@@ -439,6 +499,7 @@ article {
         text-align: center;
         padding-left: 0;
         margin-top: 10px;
+        margin-top: 1rem;
     }
 
     .news-image {
@@ -447,7 +508,9 @@ article {
 
     .news-text {
         padding-left: 30px;
+        padding-left: 3rem;
         padding-right: 30px;
+        padding-right: 3rem;
     }
 
     .content-main-header {
@@ -463,9 +526,12 @@ article {
     .gwrslogo {
         background: url("../img/testlogo_desktop.jpg");
         height: 75px;
+        height: 7.5rem;
         width: 200px;
+        width: 20rem;
         float: left;
         margin-top: 5px;
+        margin-top: 0.5rem;
     }
 
     .gwrsheader {
@@ -478,6 +544,7 @@ article {
 
     .mainnavi li {
         margin-left: 10px;
+        margin-left: 1rem;
     }
 }
 
@@ -487,8 +554,11 @@ article {
         position: relative;
         float: left;
         width: 200px;
+        width: 20rem;
         height: 75px;
+        height: 7.5rem;
         margin-top: 5px;
+        margin-top: 0.5rem;
     }
 
     .gwrsheader {
@@ -501,6 +571,7 @@ article {
 
     .mainnavi li {
         margin-left: 20px;
+        margin-left: 2rem;
     }
 }
 
@@ -509,16 +580,14 @@ article {
 /******************************/
 .text-center {
     padding-top: 20px;
-}
-
-.col-xs-12 {
-    /*		background-color: #fff; */
+    padding-top: 2rem;
 }
 
 #sidebar {
     height: 100%;
     padding-right: 0;
     padding-top: 20px;
+    padding-top: 2rem;
 }
 
 #sidebar .nav {
@@ -528,4 +597,5 @@ article {
 #sidebar li {
     border: 0 #f2f2f2 solid;
     border-bottom-width: 1px;
+    border-bottom-width: 0.1rem;
 }
