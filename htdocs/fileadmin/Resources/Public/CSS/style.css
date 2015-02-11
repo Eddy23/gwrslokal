@@ -4,6 +4,35 @@ body {
     font-size: 1.4rem;
 }
 
+
+h1 {
+    color: #552f1c;
+    font-family: 'Roboto Slab', serif;
+    font-size: 35px;
+    font-size: 3.5rem;
+    font-weight: normal;
+    letter-spacing: normal;
+    margin-top: 0;
+    margin-bottom:25px;
+    margin-bottom: 2.5rem;
+    word-spacing: 0;
+}
+
+p {
+    color: #333333;
+    font-family: Helvetica sans-serif;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 1.63em;
+    margin: 20px 0 0;
+    margin: 2rem 0 0;
+    vertical-align: baseline;
+    word-spacing: 0;
+}
+
 .header-bar {
     background-color: #552F1C;
     height: 10px;

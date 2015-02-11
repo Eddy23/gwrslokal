@@ -45,6 +45,9 @@ tmpl.startseite {
 
 page = PAGE
 page {
+    headerData.100 = TEXT
+    headerData.100.value = <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
     meta < tmpl.meta
 
     includeCSS {
