@@ -43,6 +43,57 @@ tmpl.startseite {
     }
 }
 
+
+###########################################
+# Breadcrumb-Navigation                   #
+###########################################
+lib.breadcrumb = COA
+lib.breadcrumb {
+    10 = TEXT
+    10.value = Sie befinden sich hier:&nbsp;
+    20 = HMENU
+    20 {
+        special = rootline
+        # Anzeige ab Ebene 1 bis unendlich
+        special.range = 1 | -1
+        1 = TMENU
+        1 {
+            NO = 1
+            NO.doNotLinkIt = |*| 0 |*| 1
+            NO.allWrap = |*| |&nbsp;&gt;&nbsp; |*| <span class="breadcrumbact">|</span>
+        }
+    }
+}
+
+###########################################
+# Meta-Navigation                         #
+###########################################
+lib.metanavi = HMENU
+lib.metanavi {
+    special = directory
+    special.value = 10
+    1 = TMENU
+    1 {
+        expAll = 1
+        wrap = <ul class="nav navbar-nav"> | </ul>
+        NO {
+            wrapItemAndSub = <li> | </li>
+            stdWrap.htmlSpecialChars = 1
+            stdWrap.htmlSpecialChars.preserveEntities = 1
+        }
+
+        ACT < .NO
+        ACT = 1
+        ACT {
+            wrapItemAndSub = <li> | </li>
+        }
+    }
+}
+
+
+
+
+
 page = PAGE
 page {
     headerData.100 = TEXT
