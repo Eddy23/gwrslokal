@@ -54,6 +54,7 @@ p {
 
 #mainnavi-bar {
     padding-right: 0;
+    padding-bottom: 2.5rem;
 }
 
 .container-fluid {
@@ -128,6 +129,8 @@ article {
     margin-top: 2rem;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 70px;
+    margin-bottom: 7rem;
 }
 
 .maincontent .gwrsnews {
@@ -138,8 +141,8 @@ article {
     float: right;
     height: 86px;
     height: 8.6rem;
-    padding-top: 18px;
-    padding-top: 1.8rem;
+    padding-top: 28px;
+    padding-top: 2.8rem;
     text-align: right;
 }
 
@@ -227,13 +230,22 @@ article {
     font-size: 1.8rem;
 }
 
-.footer {
+.templatefooter {
     clear:both;
-    background-color: #ff0000;
     height: 40px;
     height: 4rem;
     margin-top: 40px;
     margin-top: 4rem;
+    padding-top:50px;
+    padding-top: 5rem;
+    border-top: 3px solid #552F1C;
+    background: url(../../../Logo/footerimage.png);
+    background-position: center 3px;
+    background-repeat: no-repeat;
+}
+
+.templatefooteradress, .templatefooterphone, .templatefootermail {
+    text-align: center;
 }
 
 .footer p {
@@ -245,11 +257,8 @@ article {
 /* make sidebar nav vertical */
 @media only screen and (min-width: 768px) {
     .gwrslogo {
-        background: url("../img/testlogo_tablet.jpg");
-        height: 75px;
-        height: 7.5rem;
-        width: 200px;
-        width: 20rem;
+        height: 100px;
+        height: 10rem;
         float: left;
         margin-top: 5px;
         margin-top: 0.5rem;
@@ -268,9 +277,9 @@ article {
         float: none;
     }
 
+
     .sidebar-nav .navbar ul:not {
         display: block;
-
     }
 
     .sidebar-nav .navbar li {
@@ -311,13 +320,12 @@ article {
 
 @media only screen and (max-width: 767px) {
     .gwrslogo {
-        background: url("../img/testlogo_smartphone.jpg");
-        height: 75px;
-        height: 7.5rem;
+        width: 272px;
+        width: 27.2rem;
+        height: 100px;
+        height: 10rem;
         margin: 5px auto 15px;
         margin: 0.5rem auto 1.5rem;
-        width: 200px;
-        width: 20rem;
     }
 
     .gwrsheader {
@@ -566,11 +574,8 @@ article {
 
 @media only screen and (min-width: 992px) {
     .gwrslogo {
-        background: url("../img/testlogo_desktop.jpg");
-        height: 75px;
-        height: 7.5rem;
-        width: 200px;
-        width: 20rem;
+        height: 100px;
+        height: 10rem;
         float: left;
         margin-top: 5px;
         margin-top: 0.5rem;
@@ -592,13 +597,10 @@ article {
 
 @media only screen and (min-width: 1200px) {
     .gwrslogo {
-        background: url("../img/testlogo_large_desktop.jpg");
         position: relative;
         float: left;
-        width: 200px;
-        width: 20rem;
-        height: 75px;
-        height: 7.5rem;
+        height: 100px;
+        height: 10rem;
         margin-top: 5px;
         margin-top: 0.5rem;
     }

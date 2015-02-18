@@ -43,6 +43,22 @@ tmpl.startseite {
     }
 }
 
+###########################################
+# Logografik                              #
+###########################################
+lib.logo = IMAGE
+lib.logo {
+    file = fileadmin/Logo/logo_gwrs.png
+    altText = Logo GWRS Enzweihingen
+    titleText = Logo GWRS Enzweihingen
+    imageLinkWrap = 1
+    imageLinkWrap {
+        enable = 1
+        typolink.parameter = 2
+    }
+}
+
+
 
 ###########################################
 # Breadcrumb-Navigation                   #
@@ -90,6 +106,50 @@ lib.metanavi {
     }
 }
 
+###########################################
+# Seiten-Navigation                         #
+###########################################
+lib.sidenavi = HMENU
+lib.sidenavi {
+    #    special = directory
+    #    special.value = 13
+    entryLevel = 0
+    1 = TMENU
+    1 {
+        expAll = 0
+        wrap = <ul class="nav navbar-nav"> | </ul>
+        NO {
+            wrapItemAndSub = <li> | </li>
+            stdWrap.htmlSpecialChars = 1
+            stdWrap.htmlSpecialChars.preserveEntities = 1
+        }
+
+        ACT < .NO
+        ACT = 1
+        ACT {
+            wrapItemAndSub = <li> | </li>
+        }
+
+        IFSUB = 1
+        IFSUB {
+            wrapItemAndSub = <li>| </li>
+            stdWrap.wrap = | <span class="caret"></span>
+            ATagParams = data-toggle="collapse" data-target="#collapse1"
+        }
+
+        ACTIFSUB < .IFSUB
+        ACTIFSUB {
+            wrapItemAndSub = <li class="active">|</li>
+        }
+    }
+
+    2 < .1
+    2.wrap = <ul id="collapse1" class="nav collapse"> | </ul>
+    2.NO {
+        wrapItemAndSub = <li> | </li>
+    }
+}
+
 
 
 
@@ -107,10 +167,12 @@ page {
     }
 
     includeJSFooterlibs {
-        jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+#        jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+        jquery = http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
         jquery.external = 1
         jquery.forceOnTop = 1
         file1 = fileadmin/Resources/Public/Bootstrap/js/bootstrap.js
+#        file2 = fileadmin/Resources/Public/Js/navitoggle.js
     }
 
     10 = CASE

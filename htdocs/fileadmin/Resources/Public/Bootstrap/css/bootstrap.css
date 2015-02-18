@@ -3101,14 +3101,17 @@ tr.collapse.in {
 tbody.collapse.in {
   display: table-row-group;
 }
+
 .collapsing {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height .35s ease;
-       -o-transition: height .35s ease;
-          transition: height .35s ease;
+  -webkit-transition: height .95s ease;
+       -o-transition: height .95s ease;
+          transition: height .95s ease;
 }
+
+
 .caret {
   display: inline-block;
   width: 0;
