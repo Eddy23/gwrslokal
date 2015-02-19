@@ -49,6 +49,8 @@ tmpl.startseite {
 lib.logo = IMAGE
 lib.logo {
     file = fileadmin/Logo/logo_gwrs.png
+#    file.width = 185
+#    file.height = 75
     altText = Logo GWRS Enzweihingen
     titleText = Logo GWRS Enzweihingen
     imageLinkWrap = 1
@@ -134,7 +136,7 @@ lib.sidenavi {
         IFSUB {
             wrapItemAndSub = <li>| </li>
             stdWrap.wrap = | <span class="caret"></span>
-            ATagParams = data-toggle="collapse" data-target="#collapse1"
+            ATagParams = data-toggle="collapse" data-target="#collapse"
         }
 
         ACTIFSUB < .IFSUB
@@ -144,13 +146,49 @@ lib.sidenavi {
     }
 
     2 < .1
-    2.wrap = <ul id="collapse1" class="nav collapse"> | </ul>
+    2.wrap = <ul id="collapse" class="nav collapse"> | </ul>
     2.NO {
         wrapItemAndSub = <li> | </li>
     }
 }
 
+###########################################
+# Footer Adress                           #
+###########################################
+lib.footeradress = COA
+lib.footeradress {
+    10 = TEXT
+    10.value = <b>Anschrift:</b><br />
+    20 = TEXT
+    20.value = GWRS Enzweihingen<br />Schulstraße 38<br />71665 Vaihingen-Enzweihingen
+}
 
+###########################################
+# Footer Phone                            #
+###########################################
+lib.footerphone = COA
+lib.footerphone {
+    10 = TEXT
+    10.value = <b>Telefon:</b><br />
+    20 = TEXT
+    20.value = 07042 97310
+    20.wrap = <a href="tel:0704297310">|</a>
+}
+
+###########################################
+# Footer Mail                             #
+###########################################
+lib.footermail = COA
+lib.footermail {
+    10 = TEXT
+    10.value = <b>E-Mail:</b><br />
+    20 = TEXT
+    20.value = poststelle@enzweihinger-schule.de
+    20.typolink {
+        parameter = poststelle@enzweihinger-schule.de
+        title = E-Mail an die Poststelle der GWRS Enzweihingen
+    }
+}
 
 
 
