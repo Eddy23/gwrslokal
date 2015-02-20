@@ -3,7 +3,7 @@
     <div class="gwrslogo" class="col-lg-3 col-md-4 col-sm-5">
         <f:cObject typoscriptObjectPath="lib.logo"/>
     </div>
-    <div id="mainnavi-bar" class="col-lg-9 col-md-8 col-sm-7">
+    <nav id="mainnavi-bar" class="col-lg-9 col-md-8 col-sm-7">
         <div class="mainnavi">
             <div class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
@@ -21,15 +21,15 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gwrsheader col-lg-12 col-md-12 col-sm-12"></div>
+    </nav>
+    <header class="gwrsheader col-lg-12 col-md-12 col-sm-12"></header>
     <ol class="breadcrumb col-lg-12 col-md-12 col-sm-12">
         <f:cObject typoscriptObjectPath="lib.breadcrumb"/>
     </ol>
 
-    <div class="maincontent col-lg-12 col-md-12 col-sm-12">
+    <main class="maincontent col-lg-12 col-md-12 col-sm-12">
         <div class="col-sm-2 col-lg-2 col-md-2 sidebar-left">
-            <div class="sidebar-nav">
+            <nav class="sidebar-nav">
                 <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -48,21 +48,21 @@
 
                     <!--/.nav-collapse -->
                 </div>
-            </div>
+            </nav>
         </div>
         <f:render section="main"/>
-    </div>
-    <div class="templatefooter">
+    </main>
+    <footer class="templatefooter">
         <div class="row">
-            <div class="templatefooteradress col-lg-4 col-md-4 col-sm-4">
+            <address class="templatefooteradress col-lg-4 col-md-4 col-sm-4">
                 <f:cObject typoscriptObjectPath="lib.footeradress"/>
-            </div>
-            <div class="templatefooterphone col-lg-4 col-md-4 col-sm-4">
+            </address>
+            <address class="templatefooterphone col-lg-4 col-md-4 col-sm-4">
                 <f:cObject typoscriptObjectPath="lib.footerphone"/>
-            </div>
-            <div class="templatefootermail col-lg-4 col-md-4 col-sm-4">
+            </address>
+            <address class="templatefootermail col-lg-4 col-md-4 col-sm-4">
                 <f:cObject typoscriptObjectPath="lib.footermail"/>
-            </div>
+            </address>
         </div>
-    </div>
+    </footer>
 </div>

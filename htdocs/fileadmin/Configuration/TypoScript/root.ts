@@ -48,7 +48,7 @@ tmpl.startseite {
 ###########################################
 lib.logo = IMAGE
 lib.logo {
-    file = fileadmin/Logo/logo_gwrs.png
+    file = fileadmin/Logo/logo_gwrs2.png
 #    file.width = 185
 #    file.height = 75
     altText = Logo GWRS Enzweihingen
@@ -119,6 +119,7 @@ lib.sidenavi {
     1 = TMENU
     1 {
         expAll = 0
+        collapse = 0
         wrap = <ul class="nav navbar-nav"> | </ul>
         NO {
             wrapItemAndSub = <li> | </li>
@@ -136,7 +137,7 @@ lib.sidenavi {
         IFSUB {
             wrapItemAndSub = <li>| </li>
             stdWrap.wrap = | <span class="caret"></span>
-            ATagParams = data-toggle="collapse" data-target="#collapse"
+            ATagParams = data-toggle="collapse" data-target="#testcollapse"
         }
 
         ACTIFSUB < .IFSUB
@@ -146,7 +147,8 @@ lib.sidenavi {
     }
 
     2 < .1
-    2.wrap = <ul id="collapse" class="nav collapse"> | </ul>
+    2.collapse = 0
+    2.wrap = <ul id="testcollapse" class="nav collapse"> | </ul>
     2.NO {
         wrapItemAndSub = <li> | </li>
     }
@@ -158,9 +160,11 @@ lib.sidenavi {
 lib.footeradress = COA
 lib.footeradress {
     10 = TEXT
-    10.value = <b>Anschrift:</b><br />
+    10.value = <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><br />
     20 = TEXT
-    20.value = GWRS Enzweihingen<br />Schulstraße 38<br />71665 Vaihingen-Enzweihingen
+    20.value = <b>Anschrift:</b><br />
+    30 = TEXT
+    30.value = <p>GWRS Enzweihingen<br />Schulstraße 38<br />71665 Vaihingen-Enzweihingen</p>
 }
 
 ###########################################
@@ -169,10 +173,12 @@ lib.footeradress {
 lib.footerphone = COA
 lib.footerphone {
     10 = TEXT
-    10.value = <b>Telefon:</b><br />
+    10.value = <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><br />
     20 = TEXT
-    20.value = 07042 97310
-    20.wrap = <a href="tel:0704297310">|</a>
+    20.value = <b>Telefon:</b><br />
+    30 = TEXT
+    30.value = 07042 97310
+    30.wrap = <p><a href="tel:0704297310">|</a></p>
 }
 
 ###########################################
@@ -181,10 +187,12 @@ lib.footerphone {
 lib.footermail = COA
 lib.footermail {
     10 = TEXT
-    10.value = <b>E-Mail:</b><br />
+    10.value = <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><br />
     20 = TEXT
-    20.value = poststelle@enzweihinger-schule.de
-    20.typolink {
+    20.value = <b>E-Mail:</b><br />
+    30 = TEXT
+    30.value = <p>poststelle@enzweihinger-schule.de</p>
+    30.typolink {
         parameter = poststelle@enzweihinger-schule.de
         title = E-Mail an die Poststelle der GWRS Enzweihingen
     }
@@ -210,7 +218,7 @@ page {
         jquery.external = 1
         jquery.forceOnTop = 1
         file1 = fileadmin/Resources/Public/Bootstrap/js/bootstrap.js
-#        file2 = fileadmin/Resources/Public/Js/navitoggle.js
+        file2 = fileadmin/Resources/Public/Js/navitoggle.js
     }
 
     10 = CASE
