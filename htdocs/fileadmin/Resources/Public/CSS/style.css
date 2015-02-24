@@ -78,7 +78,7 @@ p {
 
 .breadcrumb:after {
     content: "";
-    background: #3e9b43;
+    background: #CCCCCC;
     position: absolute;
     top: 0;
     left: 11px;
@@ -214,9 +214,24 @@ article {
     margin-top: 0;
 }
 
+/***************/
+/* Newsbereich */
+/***************/
 .news-header {
     padding-left: 15px;
     padding-left: 1.5rem;
+}
+
+.news .article {
+    padding-bottom: 0;
+}
+
+.news .article .teaser-text {
+    margin: -19px 0 4px;
+}
+
+.news .footer p {
+    line-height: 2em;
 }
 
 .content-img-left {

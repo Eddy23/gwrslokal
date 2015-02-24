@@ -2,6 +2,8 @@
 	ServerAdmin webmaster@localhost
 	ServerName gwrslokal.de
 	ServerAlias www.gwrslokal.de
+	ServerAlias www.gwrslokal.de.*.xip.io
+	
 
 	DocumentRoot /var/www/gwrslokal/htdocs
 	<Directory />

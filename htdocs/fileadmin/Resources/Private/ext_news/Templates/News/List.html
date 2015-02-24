@@ -1,0 +1,27 @@
+{namespace n=Tx_News_ViewHelpers}
+<f:layout name="General"/>
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+    <f:if condition="{news}">
+        <f:then>
+            <div class="news-list-view">
+                <f:groupedFor each="{news}" as="groupedNews" groupBy="firstCategory" groupKey="cat">
+                    <h3>{cat.title}</h3>
+                    <f:for each="{groupedNews}" as="newsItem" iteration="iterator">
+                        <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+                    </f:for>
+                </f:groupedFor>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="no-news-found">
+                <f:translate key="list_nonewsfound"/>
+            </div>
+        </f:else>
+    </f:if>
+
+</f:section>

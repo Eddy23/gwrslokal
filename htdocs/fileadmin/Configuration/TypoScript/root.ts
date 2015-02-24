@@ -34,13 +34,9 @@ tmpl.zweispaltig {
     variables.contentRight < styles.content.getRight
 }
 
-
 tmpl.startseite < tmpl.einspaltig
 tmpl.startseite {
     template.file = fileadmin/Resources/Private/Templates/Startseite.html
-    variables {
-        news < styles.content.getRight
-    }
 }
 
 ###########################################
@@ -195,6 +191,27 @@ lib.footermail {
     30.typolink {
         parameter = poststelle@enzweihinger-schule.de
         title = E-Mail an die Poststelle der GWRS Enzweihingen
+    }
+}
+
+###########################################
+# tx_news Pfadanpassungen                 #
+###########################################
+plugin.tx_news.view {
+    templateRootPath >
+    templateRootPaths {
+        100 = EXT:news/Resources/Private/Templates/
+        200 = fileadmin/Resources/Private/ext_news/Templates/
+    }
+    partialRootPath >
+    partialRootPaths {
+        100 = EXT:news/Resources/Private/Partials/
+        200 = fileadmin/Resources/Private/ext_news/Partials/
+    }
+    layoutRootPath >
+    layoutRootPaths {
+        100 = EXT:news/Resources/Private/Layouts/
+        200 = fileadmin/Resources/Private/ext_news/Layouts/
     }
 }
 

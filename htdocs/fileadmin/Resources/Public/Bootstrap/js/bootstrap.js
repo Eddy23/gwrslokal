@@ -521,7 +521,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   Collapse.VERSION  = '3.2.0'
 
   Collapse.DEFAULTS = {
-    toggle: true
+      toggle: true
   }
 
   Collapse.prototype.dimension = function () {

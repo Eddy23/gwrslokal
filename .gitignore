@@ -12,6 +12,9 @@
 /htdocs/typo3
 /htdocs/typo3_src
 
+# Alle Bootstrap Dateien
+/htdocs/fileadmin/Resources/Public/Bootstrap/
+
 .idea
 
 .vagrant
