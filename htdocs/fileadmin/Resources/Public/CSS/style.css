@@ -139,8 +139,8 @@ article {
 }
 
 .maincontent {
-    margin-top: 20px;
-    margin-top: 2rem;
+    margin-top: 40px;
+    margin-top: 4rem;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 70px;
@@ -313,6 +313,14 @@ article {
 .news {
     margin-right: -15px;
     margin-right: -1.5rem;
+    margin-top: -36px;
+    margin-top: -3.6rem;
+}
+
+
+.newscatheader {
+    text-align: center;
+    color: #463F3E;
 }
 
 .news .article {
@@ -322,6 +330,14 @@ article {
     padding-left: 0.6rem;
     padding-right: 8px;
     padding-right: 0.8rem;
+}
+
+.news .article:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 8px;
+    visibility: visible;
 }
 
 .news .header h3 {
@@ -348,6 +364,8 @@ article {
     font-size: 10px;
     font-size: 1rem;
 }
+
+
 
 /* make sidebar nav vertical */
 @media only screen and (min-width: 768px) {
@@ -410,6 +428,37 @@ article {
 
     .mainnavi li {
         margin-left: 0;
+    }
+
+    .page-curl {
+        margin: 0 auto;
+        padding: 15px;
+        position: relative;
+    }
+
+    .page-curl:before, .page-curl:after {
+        background: none;
+        bottom: 12px;
+        -moz-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.5);
+        content: "";
+        height: 10px;
+        left: 10px;
+        position: absolute;
+        width: 40%;
+        z-index: -1;
+        -moz-transform: skew(-4deg) rotate(-5deg);
+        -webkit-transform: skew(-4deg) rotate(-5deg);
+        transform: skew(-4deg) rotate(-5deg);
+    }
+
+    .page-curl:after {
+        -moz-transform: skew(4deg) rotate(5deg);
+        -webkit-transform: skew(4deg) rotate(5deg);
+        transform: skew(4deg) rotate(5deg);
+        left: auto;
+        right: 10px;
     }
 }
 
