@@ -1,0 +1,67 @@
+<div class="header-bar"></div>
+<div class="container-fluid">
+    <div class="gwrslogo" class="col-lg-3 col-md-4 col-sm-5">
+        <f:cObject typoscriptObjectPath="lib.logo"/>
+    </div>
+    <nav id="mainnavi-bar" class="col-lg-9 col-md-8 col-sm-7">
+        <div class="mainnavi">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".sidebar-navbar-collapse23">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span class="visible-xs navbar-brand">Hauptnavigation</span>
+                </div>
+                <div class="navbar-collapse collapse sidebar-navbar-collapse23">
+                    <f:cObject typoscriptObjectPath="lib.metanavi"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="gwrsheader col-lg-12 col-md-12 col-sm-12"></header>
+    <ol class="breadcrumb col-lg-12 col-md-12 col-sm-12">
+        <f:cObject typoscriptObjectPath="lib.breadcrumb"/>
+    </ol>
+
+    <main class="maincontent col-lg-12 col-md-12 col-sm-12">
+        <div class="col-sm-2 col-lg-2 col-md-2 sidebar-left">
+            <nav class="sidebar-nav">
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse24">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="visible-xs navbar-brand">Seitennavigation</span>
+                    </div>
+
+                    <div class="collapse navbar-collapse  sidebar-navbar-collapse24">
+                        <f:cObject typoscriptObjectPath="lib.sidenavi"/>
+                    </div>
+
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+        <f:render section="main"/>
+    </main>
+    <footer class="templatefooter">
+        <div class="row">
+            <address class="templatefooteradress col-lg-4 col-md-4 col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.footeradress"/>
+            </address>
+            <address class="templatefooterphone col-lg-4 col-md-4 col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.footerphone"/>
+            </address>
+            <address class="templatefootermail col-lg-4 col-md-4 col-sm-4">
+                <f:cObject typoscriptObjectPath="lib.footermail"/>
+            </address>
+        </div>
+    </footer>
+</div>
