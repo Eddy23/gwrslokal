@@ -28,41 +28,7 @@
 			<div class="header">
 				<h3>{newsItem.title}</h3>
 			</div>
-			<div class="footer">
-				<p>
-					<!-- date -->
-					<span class="news-list-date">
-						<n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
-					</span>
 
-					<f:if condition="{newsItem.categories}">
-						<f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
-					</f:if>
-
-					<f:if condition="{newsItem.tags}">
-						<!-- Tags -->
-						<span class="news-list-tags">
-						<f:for each="{newsItem.tags}" as="tag">
-							{tag.title}
-						</f:for>
-						</span>
-					</f:if>
-
-					<f:if condition="{newsItem.author}">
-						<!-- author -->
-						<span class="news-list-author">
-							<f:translate key="author" arguments="{0:newsItem.author}"></f:translate>
-						</span>
-					</f:if>
-				</p>
-			</div>
-
-			<f:if condition="{newsItem.teaser}">
-				<!-- teaser -->
-				<div class="teaser-text">
-					<f:format.html>{newsItem.teaser}</f:format.html>
-				</div>
-			</f:if>
 
 			<f:if condition="{newsItem.contentElements}">
 				<!-- content elements -->
@@ -83,20 +49,6 @@
 					<f:link.page pageUid="{settings.backPid}">
 						<f:translate key="back-link" />
 					</f:link.page>
-				</div>
-			</f:if>
-
-			<f:if condition="{settings.detail.showSocialShareButtons}">
-				<div class="facebook">
-					<div class="like">
-						<n:social.facebook.like></n:social.facebook.like>
-					</div>
-					<div class="share">
-						<n:social.facebook.share>Share</n:social.facebook.share>
-					</div>
-					<div class="twitter">
-						<n:social.twitter>Twitter</n:social.twitter>
-					</div>
 				</div>
 			</f:if>
 

@@ -183,6 +183,14 @@ article {
     margin-bottom: 0.6rem;
 }
 
+.menunewsdetail {
+    padding: 15px;
+    padding: 1.5rem;
+    margin-left: 0;
+    color: #777777;
+}
+
+
 .sidebar-left {
     padding-left: 0;
 }
@@ -214,9 +222,9 @@ article {
     margin-top: 0;
 }
 
-/***************/
-/* Newsbereich */
-/***************/
+/*******************************/
+/* Newsbereich                 */
+/*******************************/
 .news-header {
     padding-left: 15px;
     padding-left: 1.5rem;
@@ -313,23 +321,26 @@ article {
 .news {
     margin-right: -15px;
     margin-right: -1.5rem;
-    margin-top: -36px;
-    margin-top: -3.6rem;
+    margin-top: -30px;
+    margin-top: -3rem;
 }
 
 
 .newscatheader {
     text-align: center;
     color: #463F3E;
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .news .article {
-    background-color: #DDDDDD;
+    background-color: #9B95DE;
     border:1px solid #116A98;
     padding-left: 6px;
     padding-left: 0.6rem;
     padding-right: 8px;
     padding-right: 0.8rem;
+    padding-top: 0;
 }
 
 .news .article:after {
@@ -340,12 +351,47 @@ article {
     visibility: visible;
 }
 
+.news-single {
+    margin-right: 15px;
+    margin-right: 1.5rem;
+    margin-top: 0;
+}
+
+.news-single .header h3 {
+    color: #333333;
+    padding-top: 8px;
+    padding-top: 0.8rem;
+    text-align: center;
+}
+
+.news-single .article {
+    background-color: #EEEEEE;
+}
+
+.news-single .article .news-img-wrap {
+    float: left;
+    margin-left: 0;
+    margin-top: 25px;
+    margin-top: 2.5rem;
+    width: 33%;
+    background-color: #EEEEEE;
+}
+
+.news-single .article .news-img-wrap a{
+    float: none;
+    margin-right: 10px;
+    margin-right: 1em;
+}
+
 .news .header h3 {
-    color: #116A98;
     font-size: 16px;
     font-size: 1.6rem;
     margin-top: 7px;
     margin-top: 0.7rem;
+}
+
+.news .header h3 a{
+    color: #333333;
 }
 
 .news .teaser-text p {
@@ -355,6 +401,7 @@ article {
 }
 
 .news .teaser-text .more {
+    color: #444444;
     font-size: 12px;
     font-size: 1.2rem;
 }
@@ -365,7 +412,11 @@ article {
     font-size: 1rem;
 }
 
-
+.news-text-wrap p {
+    color:#000000;
+    font-size: 15px;
+    font-size: 1.5rem;
+}
 
 /* make sidebar nav vertical */
 @media only screen and (min-width: 768px) {

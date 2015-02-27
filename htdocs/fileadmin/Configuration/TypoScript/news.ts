@@ -14,7 +14,7 @@ lib.news {
     settings {
         //categories = 49
         limit = 30
-        detailPid = 8
+        detailPid = 21
         overrideFlexformSettingsIfEmpty := addToList(detailPid)
         startingpoint = 9
     }

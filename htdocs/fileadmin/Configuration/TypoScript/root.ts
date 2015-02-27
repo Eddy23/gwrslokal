@@ -8,6 +8,7 @@ tmpl.meta {
     DESCRIPTION {
         data = TSFE:page|description
     }
+
     KEYWORDS {
         data = TSFE:page|keywords
         keywords = 1
@@ -39,14 +40,19 @@ tmpl.startseite {
     template.file = fileadmin/Resources/Private/Templates/Startseite.html
 }
 
+tmpl.newsdetail < tmpl.einspaltig
+tmpl.newsdetail {
+    template.file = fileadmin/Resources/Private/Templates/Newsdetail.html
+}
+
 ###########################################
 # Logografik                              #
 ###########################################
 lib.logo = IMAGE
 lib.logo {
     file = fileadmin/Logo/logo_gwrs2.png
-#    file.width = 185
-#    file.height = 75
+    #    file.width = 185
+    #    file.height = 75
     altText = Logo GWRS Enzweihingen
     titleText = Logo GWRS Enzweihingen
     imageLinkWrap = 1
@@ -55,8 +61,6 @@ lib.logo {
         typolink.parameter = 2
     }
 }
-
-
 
 ###########################################
 # Breadcrumb-Navigation                   #
@@ -132,8 +136,15 @@ lib.sidenavi {
         IFSUB = 1
         IFSUB {
             wrapItemAndSub = <li>| </li>
-            stdWrap.wrap = | <span class="caret"></span>
-            ATagParams = data-toggle="collapse" data-target="#testcollapse"
+            doNotLinkIt = 1
+            stdWrap.cObject = TEXT
+            stdWrap.cObject.value =
+            before.stdWrap.cObject = TEXT
+            before.stdWrap.cObject {
+                field = title
+#                dataWrap = <a data-toggle="collapse" data-target="#testcollapse" href=#>|<span class="caret"></span></a>
+                dataWrap = <button data-toggle="collapse" data-target="#testcollapse">|<span class="caret"></span></button>
+            }
         }
 
         ACTIFSUB < .IFSUB
@@ -195,26 +206,77 @@ lib.footermail {
 }
 
 ###########################################
-# tx_news Pfadanpassungen                 #
+# tx_news Allgemeine Einstellungen        #
 ###########################################
-plugin.tx_news.view {
-    templateRootPath >
-    templateRootPaths {
-        100 = EXT:news/Resources/Private/Templates/
-        200 = fileadmin/Resources/Private/ext_news/Templates/
+lib.news = USER
+lib.news {
+    userFunc = tx_extbase_core_bootstrap->run
+    extensionName = News
+    pluginName = Pi1
+    controller = News
+    settings =< plugin.tx_news.settings
+    persistence =< plugin.tx_news.persistence
+    view =< plugin.tx_news.view
+
+    settings {
+        detailPid = 21
+        list.media.dummyImage = fileadmin/News/DummyImage/standard.png
+        detail.media.image.maxWidth = 200
     }
-    partialRootPath >
-    partialRootPaths {
-        100 = EXT:news/Resources/Private/Partials/
-        200 = fileadmin/Resources/Private/ext_news/Partials/
-    }
-    layoutRootPath >
-    layoutRootPaths {
-        100 = EXT:news/Resources/Private/Layouts/
-        200 = fileadmin/Resources/Private/ext_news/Layouts/
+
+    view {
+        templateRootPath >
+        templateRootPaths {
+            100 = EXT:news/Resources/Private/Templates/
+            200 = fileadmin/Resources/Private/ext_news/Templates/
+        }
+
+        partialRootPath >
+        partialRootPaths {
+            100 = EXT:news/Resources/Private/Partials/
+            200 = fileadmin/Resources/Private/ext_news/Partials/
+        }
+
+        layoutRootPath >
+        layoutRootPaths {
+            100 = EXT:news/Resources/Private/Layouts/
+            200 = fileadmin/Resources/Private/ext_news/Layouts/
+        }
     }
 }
 
+###########################################
+# tx_news List-Einstellungen              #
+###########################################
+lib.newslist < lib.news
+lib.newslist {
+    action = list
+    switchableControllerActions.News.1 = list
+    settings.archiveRestriction = active
+}
+
+###########################################
+# tx_news Detail-Einstellungen            #
+###########################################
+lib.newsdetail < lib.news
+lib.newsdetail {
+    action = detail
+    switchableControllerActions.News.1 = detail
+    lib.metanavi.includeNotInMenu = 1
+}
+
+
+####################################################################################
+# Seite Newsdetail (ID 21) einblenden und nicht verlinken, wenn Newsdetailansicht  #
+####################################################################################
+[globalVar = TSFE:id=21]
+    lib.metanavi.includeNotInMenu = 1
+    lib.metanavi.1.CUR = < .NO
+    lib.metanavi.1.CUR {
+        wrapItemAndSub = <li class="menunewsdetail"> | </li>
+        doNotLinkIt = 1
+    }
+[end]
 
 
 page = PAGE
@@ -230,12 +292,12 @@ page {
     }
 
     includeJSFooterlibs {
-#        jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+        #        jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
         jquery = http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
         jquery.external = 1
         jquery.forceOnTop = 1
         file1 = fileadmin/Resources/Public/Bootstrap/js/bootstrap.js
-        file2 = fileadmin/Resources/Public/Js/navitoggle.js
+#        file2 = fileadmin/Resources/Public/Js/navitoggle.js
     }
 
     10 = CASE
@@ -247,5 +309,6 @@ page {
         1 < tmpl.einspaltig
         2 < tmpl.zweispaltig
         3 < tmpl.startseite
+        4 < tmpl.newsdetail
     }
 }
