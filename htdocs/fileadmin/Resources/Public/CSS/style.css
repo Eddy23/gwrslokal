@@ -52,6 +52,8 @@ p {
     height: 1rem;
 }
 
+
+
 #mainnavi-bar {
     padding-right: 0;
     padding-bottom: 2.5rem;
@@ -184,10 +186,16 @@ article {
 }
 
 .menunewsdetail {
-    padding: 15px;
-    padding: 1.5rem;
-    margin-left: 0;
-    color: #777777;
+    padding: 10px 15px;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    border-radius: 0.4rem;
+    background-color: #3E9B43;
+    color: #FFFFFF;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #3E9B43;
 }
 
 
@@ -321,8 +329,8 @@ article {
 .news {
     margin-right: -15px;
     margin-right: -1.5rem;
-    margin-top: -30px;
-    margin-top: -3rem;
+    margin-top: -37px;
+    margin-top: -3.7rem;
 }
 
 
@@ -514,6 +522,8 @@ article {
 }
 
 @media only screen and (max-width: 767px) {
+
+
     .gwrslogo {
         height: 75px;
         height: 7.5rem;
@@ -756,6 +766,15 @@ article {
         padding-left: 3rem;
         padding-right: 30px;
         padding-right: 3rem;
+    }
+
+    .news, .news-single  {
+        margin-right: -2px;
+        margin-right: -0.2rem;
+    }
+
+    .news {
+        margin-top: 0;
     }
 
     .content-main-header {

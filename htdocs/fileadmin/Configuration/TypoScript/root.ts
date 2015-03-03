@@ -63,6 +63,14 @@ lib.logo {
 }
 
 ###########################################
+# Header Slider                           #
+###########################################
+
+
+
+
+
+###########################################
 # Breadcrumb-Navigation                   #
 ###########################################
 lib.breadcrumb = COA
@@ -74,6 +82,9 @@ lib.breadcrumb {
         special = rootline
         # Anzeige ab Ebene 1 bis unendlich
         special.range = 1 | -1
+        # Versteckte Seite "Newsdetail" anzeigen, aber nicht die versteckte Seite uid=10
+        includeNotInMenu = 1
+        excludeUidList = 10
         1 = TMENU
         1 {
             NO = 1
@@ -93,9 +104,9 @@ lib.metanavi {
     1 = TMENU
     1 {
         expAll = 1
-        wrap = <ul class="nav navbar-nav"> | </ul>
+        wrap = <ul class="nav nav-pills"> | </ul>
         NO {
-            wrapItemAndSub = <li> | </li>
+            wrapItemAndSub = <li role="presentation"> | </li>
             stdWrap.htmlSpecialChars = 1
             stdWrap.htmlSpecialChars.preserveEntities = 1
         }
@@ -103,7 +114,7 @@ lib.metanavi {
         ACT < .NO
         ACT = 1
         ACT {
-            wrapItemAndSub = <li> | </li>
+            wrapItemAndSub = <li class="active"> | </li>
         }
     }
 }
@@ -298,6 +309,8 @@ page {
         jquery.forceOnTop = 1
         file1 = fileadmin/Resources/Public/Bootstrap/js/bootstrap.js
 #        file2 = fileadmin/Resources/Public/Js/navitoggle.js
+        file3 = fileadmin/Resources/Public/Js/removepillsnav.js
+        file4 = fileadmin/Resources/Public/Js/imagefade.js
     }
 
     10 = CASE
