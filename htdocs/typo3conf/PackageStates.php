@@ -486,6 +486,24 @@ return array (
       array (
       ),
     ),
+    'realurl' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/realurl/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
+    'pits_layerslider' => 
+    array (
+      'state' => 'active',
+      'packagePath' => 'typo3conf/ext/pits_layerslider/',
+      'classesPath' => 'Classes/',
+      'suggestions' => 
+      array (
+      ),
+    ),
     'news' => 
     array (
       'state' => 'active',

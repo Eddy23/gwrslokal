@@ -2,6 +2,9 @@ config {
     language = de
     htmlTag_langKey = de-DE
     locale_all = de_DE
+    simulateStaticDocuments = 0
+    baseURL = http://gwrslokal.de/
+    tx_realurl_enable = 1
 }
 
 tmpl.meta {
@@ -61,13 +64,6 @@ lib.logo {
         typolink.parameter = 2
     }
 }
-
-###########################################
-# Header Slider                           #
-###########################################
-
-
-
 
 
 ###########################################
@@ -303,14 +299,14 @@ page {
     }
 
     includeJSFooterlibs {
-        #        jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+#        jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
         jquery = http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
         jquery.external = 1
         jquery.forceOnTop = 1
         file1 = fileadmin/Resources/Public/Bootstrap/js/bootstrap.js
 #        file2 = fileadmin/Resources/Public/Js/navitoggle.js
         file3 = fileadmin/Resources/Public/Js/removepillsnav.js
-        file4 = fileadmin/Resources/Public/Js/imagefade.js
+#        file4 = fileadmin/Resources/Public/Js/imagefade.js
     }
 
     10 = CASE

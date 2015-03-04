@@ -1,18 +1,26 @@
 <VirtualHost *:80>
+	DocumentRoot /var/www/gwrslokal/htdocs
 	ServerAdmin webmaster@localhost
 	ServerName gwrslokal.de
 	ServerAlias www.gwrslokal.de
 	ServerAlias www.gwrslokal.de.*.xip.io
 	
+	RewriteRule ^/typo3$ - [L]
+        RewriteRule ^/typo3/.*$ - [L]
 
-	DocumentRoot /var/www/gwrslokal/htdocs
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-l
+        RewriteRule .* /index.php	
+
+
 	<Directory />
 		Options FollowSymLinks
-		AllowOverride None
+		AllowOverride All
 	</Directory>
 	<Directory /var/www/>
 		Options Indexes FollowSymLinks MultiViews
-		AllowOverride None
+		AllowOverride All
 		Order allow,deny
 		allow from all
 	</Directory>
