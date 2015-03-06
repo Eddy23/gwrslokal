@@ -70,7 +70,6 @@ p {
     border-radius: 4px;
     border-radius: 0.4rem;
     list-style: outside none none;
-    margin-top: -4px;
     margin-top: -0.4rem;
     padding-bottom: 5px;
     padding-bottom: 0.5rem;
@@ -108,12 +107,13 @@ p {
 }
 
 .gwrsheader {
-    height: 150px;
-    height: 15rem;
+    height:auto;
+    max-height: 170px;
+    max-height: 17rem;
     border: 11px solid #FFFFFF;
     border: 1.1rem solid #FFFFFF;
     padding-left: 0;
-/*    background: url("../img/bg_stripes.png"); */
+    padding-right: 0;
 }
 
 .gwrsnews section {
@@ -229,6 +229,125 @@ article {
 .event-header, .news-header {
     margin-top: 0;
 }
+
+/*******************************/
+/* Header Slider               */
+/*******************************/
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-inner > .item {
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+
+/*******************************/
+/* Kalender                    */
+/*******************************/
+.month-large tr {
+    height: 40px;
+    height: 4rem;
+}
+
+.month-large tr.days {
+    height: 20px;
+    height: 2rem;
+}
+
+.default_catheader_text {
+    font-size: 11px;
+    font-size: 1.1rem;
+}
+
+.tx-cal-controller .previous-button, .tx-cal-controller .next-button {
+    margin-top: 10px;
+    margin-top: 1rem;
+}
+
+.day-button, .week-button {
+    display: none;
+}
+
+#calendar-event {
+    background-color: #ECEDED;
+    border: 2px solid #F8FAF9;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    padding: 0 0 10px 10px;
+    padding: 0 0 1rem 1rem;
+}
+
+#calendar-event h3 {
+    margin: 0 0 10px -10px;
+    margin: 0 0 1rem -1rem;
+    padding: 5px 0 5px 10px;
+    padding: 0.5rem 0 0.5rem 1rem;
+    background: linear-gradient(top, #ffacad 0%, #e5786f 50%, #cf3330 100%);
+    background: -moz-linear-gradient(top, #ffacad 0%, #e5786f 50%, #cf3330 100%);
+    background: -webkit-linear-gradient(top, #ffacad 0%, #e5786f 50%, #cf3330 100%);
+    background: -ms-linear-gradient(top, #ffacad 0%, #e5786f 50%, #cf3330 100%);
+    background: -o-linear-gradient(top, #ffacad 0%, #e5786f 50%, #cf3330 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffacad, endColorstr=#cf3330, GradientType=1);
+    -webkit-border-top-left-radius: 9px;
+    -moz-border-top-left-radius: 9px;
+    border-top-left-radius: 9px;
+    -webkit-border-top-right-radius: 9px;
+    -moz-border-top-right-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.calendar-event-row {
+    display: flex;
+    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-event-label {
+    display: inline-block;
+    width: 12%;
+    font-weight: bold;
+}
+
+.calendar-event-data {
+    display: inline-block;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.withEventDay {
+    background-color: #DF5248;
+}
+
+.withEventDay a {
+    color: #FFFFFF;
+}
+
+.tx-cal-controller .month-large tr.days td.currentDayHeader {
+    background-color: #818181;
+    color: #ffffff;
+    font-size: 13px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Tagesansicht Headerleiste */
+.tx-cal-controller div.default_catheader dt, .tx-cal-controller div.blue_catheader dt {
+    background-color: #712823;
+}
+
+/* Tagesansicht Body */
+.tx-cal-controller div.default_catheader dl, .tx-cal-controller div.default_catheader_allday, .tx-cal-controller div.blue_catheader dl, .tx-cal-controller div.blue_catheader_allday {
+    background-color: #DF5248;
+    border: 1px solid #712823;
+    color: #ffffff;
+}
+
 
 /*******************************/
 /* Newsbereich                 */
@@ -426,6 +545,8 @@ article {
     font-size: 1.5rem;
 }
 
+
+
 /* make sidebar nav vertical */
 @media only screen and (min-width: 768px) {
     .gwrslogo {
@@ -519,11 +640,13 @@ article {
         left: auto;
         right: 10px;
     }
+
+    .calendar-event-label {
+        width: 16%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-
-
     .gwrslogo {
         height: 75px;
         height: 7.5rem;
@@ -781,6 +904,15 @@ article {
         text-align: center;
     }
 
+    .calendar-event-row, .calendar-event-label {
+        display: block;
+    }
+
+    .calendar-event-data {
+        margin-left: -7px;
+        margin-left: -0.7rem;
+    }
+
     .footer {
         display: none;
     }
@@ -806,6 +938,10 @@ article {
     .mainnavi li {
         margin-left: 10px;
         margin-left: 1rem;
+    }
+
+    .calendar-event-label {
+        width: 14%;
     }
 }
 
