@@ -267,6 +267,16 @@ lib.footermail {
 }
 
 ###########################################
+# Google Maps                             #
+###########################################
+lib.googlemaps = COA
+lib.googlemaps {
+    10 = TEXT
+    10.value = <div>Hallo ich bin Googlemaps 2323</div>
+}
+
+
+###########################################
 # tx_news Allgemeine Einstellungen        #
 ###########################################
 lib.news = USER
@@ -374,6 +384,15 @@ tmpl.kalender {
     template.file = fileadmin/Resources/Private/Templates/Kalender.html
 }
 
+tmpl.kontakt < tmpl.einspaltig
+tmpl.kontakt {
+    template.file = fileadmin/Resources/Private/Templates/Kontakt.html
+    variables {
+        addressContent < styles.content.getLeft
+#        addressContent.select.where = colPos = 1
+    }
+}
+
 page = PAGE
 page {
     headerData.100 = TEXT
@@ -408,5 +427,6 @@ page {
         3 < tmpl.startseite
         4 < tmpl.newsdetail
         5 < tmpl.kalender
+        6 < tmpl.kontakt
     }
 }
