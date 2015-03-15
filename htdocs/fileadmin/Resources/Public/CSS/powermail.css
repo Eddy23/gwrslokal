@@ -1,5 +1,5 @@
 .tx-powermail {
-    width: 640px;
+    width: 100%;
     color: #444;
 }
 
@@ -17,12 +17,17 @@
     display: none;
 }
 
+.tx-powermail h3 {
+    display: none;
+}
+
 .tx-powermail .powermail_fieldset {
     clear: left;
-    border: 1px solid #bbb;
+    border: 3px solid #1E5799;
     padding: 10px;
     margin: 0 0 20px 0;
     background: #eee;
+    border-radius: 1.4rem;
 }
 
 .tx-powermail .powermail_fieldset .powermail_legend {
@@ -31,14 +36,16 @@
     margin: 3px 0 10px 0;
     font-size: 200%;
     white-space: normal;
+    text-align: center;
 }
 
 .tx-powermail .powermail_fieldset .powermail_label {
     display: block;
-    width: 200px;
+    width: 20%;
     float: left;
     clear: left;
     font-weight: bold;
+    text-align: right;
 }
 
 .tx-powermail .powermail_fieldset .powermail_label[title] {
@@ -72,13 +79,16 @@
 }
 
 .tx-powermail .powermail_fieldset .powermail_fieldwrap {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 15px 0;
+    margin: 0 0 1.5em 0;
+    padding-right: 40px;
+    padding-right: 4rem;
     clear: both;
     overflow: hidden;
 }
 
 .tx-powermail .powermail_fieldset .powermail_field {
-    width: 400px;
+    width: 78%;
     padding: 5px;
     margin: 0;
     border: 1px solid #bbb;
@@ -125,7 +135,7 @@
     border: 1px solid #bbb;
     float: right;
     padding: 3px;
-    width: 400px;
+    width: 78%;
     list-style: none;
     margin: 0;
 }
@@ -857,4 +867,19 @@
 
 .xdsoft_scroller_box {
     position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+    .tx-powermail .powermail_fieldset .powermail_fieldwrap {
+        padding-right: 10px;
+        padding-right: 1rem;
+    }
+
+    .tx-powermail .powermail_fieldset .powermail_field {
+        width: 70%;
+    }
+
+    .tx-powermail .powermail_fieldset .powermail_radio_outer, .tx-powermail .powermail_fieldset .powermail_captcha_outer, .tx-powermail .powermail_fieldset .powermail_check_outer, .tx-powermail .powermail_fieldset .powermail_fieldwrap_text, .tx-powermail .powermail_fieldset .powermail_fieldwrap_file_inner ul:not(.parsley-errors-list) {
+        width: 70%;
+    }
 }

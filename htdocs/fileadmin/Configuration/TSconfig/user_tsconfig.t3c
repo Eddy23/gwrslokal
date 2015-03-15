@@ -1,0 +1,29 @@
+# Verweis auf diese Datei in der Benutzergruppe, Feld TSconfig
+
+# RTE Buttons ausblenden bzw. anzeigen
+page.RTE.default {
+    hideButtons = textstylelabel, textstyle, outdent, indent, textindicator, findreplace, chMode, removeformat, redo, about,
+    showButtons = bold, italic, subscript, superscript, blockstylelabel, blockstyle, orderedlist, unorderedlist, insertcharacter, link, table, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit,cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge, formatblock, undo
+}
+
+# Dem Blockstil "align-justify" die Bezeichnung "Blocksatz" zuordnen
+page.RTE.classes {
+    align-justify {
+        name = Blocksatz
+        value = text-align: justify;
+    }
+}
+
+# Sollte eigentlich Rahmen (gelb und grau) bei Blockstil entfernen
+# Tut aber nicht
+page.RTE.default.buttons {
+	 blockstyle.tags.div.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+     blockstyle.tags.table.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+}
+
+# Überschrift h3 wird umbenannt in Zwischenüberschrift
+page.RTE.default.buttons.formatblock.items.h3.label = Zwischenüberschrift (h3)
+
+#page.TCEFORM.pages {
+#    subtitle.disabled = 1
+#}

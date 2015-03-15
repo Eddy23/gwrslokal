@@ -12,10 +12,15 @@ h1 {
     font-size: 3.5rem;
     font-weight: normal;
     letter-spacing: normal;
-    margin-top: 0;
+    margin-top: 50px;
+    margin-top: 5rem;
     margin-bottom:25px;
     margin-bottom: 2.5rem;
     word-spacing: 0;
+}
+
+h1.csc-firstHeader {
+    margin-top: 0;
 }
 
 h3 {
@@ -26,10 +31,16 @@ h3 {
     font-weight: bold;
     letter-spacing: normal;
     line-height: 1.35em;
-    margin: 30px 0 0;
-    margin: 3rem 0 0;
+    margin: 20px 0 0;
+    margin: 2rem 0 0;
     word-spacing: 0;
 }
+
+div.csc-textpic-intext-left .csc-textpic-imagewrap, div.csc-textpic-intext-right .csc-textpic-imagewrap {
+    margin-top: 15px;
+    margin-top: 1.5rem;
+}
+
 
 p {
     color: #333333;
@@ -40,11 +51,13 @@ p {
     font-weight: 500;
     letter-spacing: normal;
     line-height: 1.63em;
-    margin: 20px 0 0;
-    margin: 2rem 0 0;
+    margin: 10px 0 0;
+    margin: 1rem 0 0;
     vertical-align: baseline;
     word-spacing: 0;
 }
+
+
 
 .header-bar {
     background-color: #552F1C;
@@ -171,6 +184,8 @@ article {
     margin-left: 3rem;
 }
 
+
+
 .mainnavi li a {
     text-decoration: none;
 }
@@ -196,6 +211,10 @@ article {
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     background-color: #3E9B43;
+}
+
+.nav-pills > li > a:hover {
+    background-color: #e4f4e5;
 }
 
 
@@ -247,6 +266,10 @@ article {
 /*******************************/
 /* Kalender                    */
 /*******************************/
+#totalcalendar {
+    padding-right: 0;
+}
+
 .month-large tr {
     height: 40px;
     height: 4rem;
@@ -348,7 +371,39 @@ article {
     color: #ffffff;
 }
 
+/*******************************/
+/* Kontaktformular             */
+/*******************************/
+#contactform {
+    padding-left: 30px;
+    padding-left: 3rem;
+    margin-top: 60px;
+    margin-top: 6rem;
+}
 
+#googlemaps {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    width:75%;
+}
+
+#googlemaps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contactadjust {
+    padding-right: 0;
+}
+
+.contactadjust h3 {
+    margin-top: 0;
+}
 /*******************************/
 /* Newsbereich                 */
 /*******************************/
@@ -362,11 +417,21 @@ article {
 }
 
 .news .article .teaser-text {
-    margin: -19px 0 4px;
+    margin: -10px 0 4px;
+    margin: -1rem 0 0.4rem;
+}
+
+.news .footer .news-list-category {
+    display: none;
 }
 
 .news .footer p {
     line-height: 2em;
+}
+
+.news .footer span {
+    margin-right: 0;
+    padding-right: 5px;
 }
 
 .content-img-left {
@@ -498,8 +563,8 @@ article {
 .news-single .article .news-img-wrap {
     float: left;
     margin-left: 0;
-    margin-top: 25px;
-    margin-top: 2.5rem;
+    margin-top: 15px;
+    margin-top: 1.5rem;
     width: 33%;
     background-color: #EEEEEE;
 }
@@ -545,6 +610,55 @@ article {
     font-size: 1.5rem;
 }
 
+div.csc-textpic-imagecolumn, td.csc-textpic-imagecolumn .csc-textpic-image {
+    margin-bottom: 10px;
+ }
+
+div.csc-textpic-border div.csc-textpic-imagewrap img {
+    border: 4px solid #FFFFFF;
+}
+
+div.csc-default ul {
+    padding-left: 15px;
+    padding-left: 1.5rem;
+    margin-top: 5px;
+    margin-top: 0.5rem;
+}
+
+div.csc-default ol {
+    padding-left: 20px;
+    padding-left: 2rem;
+    margin-top: 10px;
+    margin-top: 1rem;
+}
+
+div.csc-default ul li, div.csc-default ol li {
+    font-size: 17px;
+    font-size: 1.7rem;
+}
+
+p.align-center {
+    text-align: center;
+}
+
+p.align-right {
+    text-align: right;
+}
+
+p.align-left {
+    text-align: left;
+}
+
+p.align-justify {
+    text-align: justify;
+}
+
+/**************************************************/
+/* Anpassung wegen Firefox-Bug bei img-responsive */
+/**************************************************/
+.img-responsive {
+    width: 100%;
+}
 
 
 /* make sidebar nav vertical */
@@ -644,7 +758,76 @@ article {
     .calendar-event-label {
         width: 16%;
     }
+
+    #contactform {
+        padding-left: 30px;
+        padding-left: 3rem;
+    }
 }
+
+
+/*********************************/
+/* Contentelemente               */
+/* Tabelle                       */
+/*********************************/
+td, th {
+    padding: 10px;
+    padding: 1rem;
+}
+/********************/
+/* Tabelle bordered */
+/********************/
+.table-bordered,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border: 2px solid #555;
+    background-color:#EEEEEE;
+}
+
+.table-bordered > thead > tr > th {
+    background-color: #BBBBBB;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+    font-size: 15px;
+    font-size: 1.5rem;
+}
+
+/*******************/
+/* Tabelle striped */
+/*******************/
+.table-striped,
+.table-striped > thead > tr > th,
+.table-striped > tbody > tr > th,
+.table-striped > tfoot > tr > th,
+.table-striped > thead > tr > td,
+.table-striped > tbody > tr > td,
+.table-striped > tfoot > tr > td {
+    border: 2px solid #555;
+}
+
+.table-striped > thead > tr > th,
+.table-striped > thead > tr > td {
+    font-size: 15px;
+    font-size: 1.5rem;
+    background-color: #BBBBBB;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #FFFFFF;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+    background-color: #DDDDDD;
+}
+
 
 @media only screen and (max-width: 767px) {
     .gwrslogo {
@@ -904,6 +1087,11 @@ article {
         text-align: center;
     }
 
+    #totalcalendar {
+        padding-right: 15px;
+        padding-right: 1.5rem;
+    }
+
     .calendar-event-row, .calendar-event-label {
         display: block;
     }
@@ -911,6 +1099,36 @@ article {
     .calendar-event-data {
         margin-left: -7px;
         margin-left: -0.7rem;
+    }
+
+    #contactform {
+        padding-left: 15px;
+        padding-left: 1.5rem;
+    }
+
+    .contactadjust {
+        padding-right: 15px;
+        padding-right: 1.5rem;
+    }
+
+    #googlemaps {
+        width: 100%;
+        margin-top: 30px;
+        margin-top: 3rem;
+    }
+
+    h1 {
+        font-size: 25px;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
+        margin-top: 30px;
+        margin-top: 3rem;
+    }
+
+    h1.csc-firstHeader {
+        margin-top: 30px;
+        margin-top: 3rem;
     }
 
     .footer {

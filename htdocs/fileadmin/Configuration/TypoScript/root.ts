@@ -3,9 +3,70 @@ config {
     htmlTag_langKey = de-DE
     locale_all = de_DE
     simulateStaticDocuments = 0
-    baseURL = http://gwrslokal.de/
+#    baseURL = http://www.gwrslokal.de/
+# Folgende Einstellung aktivieren, wenn Tabletansicht gecheckt werden soll
+    baseURL = http://www.gwrslokal.de.192.168.0.80.xip.io:8080/
     tx_realurl_enable = 1
 }
+
+#[globalString = IENV:HTTP_HOST=www.gwrslokal.de.192.168.0.80.xip.io]
+    # Delete prior config
+#    config.baseURL >
+    #Base href called via xip.io
+#    config.baseURL = http://www.gwrslokal.de.192.168.0.80.xip.io:8080/
+#[global]
+
+
+####################
+### RTE Tabellen ###
+####################
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list := addToList(table-striped,table-bordered)
+
+#lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.default = table
+#lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list = table,table-striped,table-bordered
+#lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.nonWrappedTag = p
+#lib.parseFunc_RTE.externalBlocks = ul,ol,table
+###########################################
+# Anpassungen css styled content          #
+###########################################
+###Klasse bodytext aus p entfernen
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
+
+###Klassen der Überschriften entfernen
+#lib.stdheader.3 >
+
+###Div um Überschriften entfernen
+lib.stdheader.stdWrap.dataWrap =
+
+
+###########################################
+# Anpassungen responsive Images           #
+###########################################
+#tt_content.image.20.maxW = 200
+
+#tt_content.image.20.1.sourceCollection {
+#    small {
+#        width = 300
+#        srcsetCandidate = 768w
+#        mediaQuery = (max-device-width:768px)
+#        dataKey = small
+#    }
+#    middle {
+#        width = 500
+#        srcsetCandidate = 992w
+#        mediaQuery = (min-device-width: 769px) AND (max-device-width: 992px)
+#        dataKey = middle
+#    }
+#    large {
+#        width = 800
+#        srcsetCandidate = 1200w
+#        mediaQuery = (min-device-width: 993px)
+#        dataKey = large
+#    }
+#}
+
+tt_content.image.20.1.params = class = "img-responsive"
+
 
 tmpl.meta {
     DESCRIPTION {
@@ -269,11 +330,11 @@ lib.footermail {
 ###########################################
 # Google Maps                             #
 ###########################################
-lib.googlemaps = COA
-lib.googlemaps {
-    10 = TEXT
-    10.value = <div>Hallo ich bin Googlemaps 2323</div>
-}
+#lib.googlemaps = COA
+#lib.googlemaps {
+#    10 = TEXT
+#    10.value = <div>Hallo ich bin Googlemaps 2323</div>
+#}
 
 
 ###########################################
@@ -389,7 +450,8 @@ tmpl.kontakt {
     template.file = fileadmin/Resources/Private/Templates/Kontakt.html
     variables {
         addressContent < styles.content.getLeft
-#        addressContent.select.where = colPos = 1
+        googleMaps < styles.content.get
+        googleMaps.select.where = colPos = 23
     }
 }
 

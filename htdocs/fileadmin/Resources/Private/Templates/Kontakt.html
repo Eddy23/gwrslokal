@@ -1,16 +1,14 @@
 <f:layout name="default"/>
 <f:section name="main">
-    <div class="col-sm-10 col-lg-10 col-md-10">
-        <div class="col-sm-2 col-lg-2 col-md-2">
+    <div class="col-sm-10 col-lg-10 col-md-10 contactadjust">
+        <div class="col-sm-3 col-lg-3 col-md-3">
             <f:format.raw>{addressContent}</f:format.raw>
         </div>
-        <div class="col-sm-8 col-lg-8 col-md-8">
-            <f:cObject typoscriptObjectPath="lib.googlemaps"/>
+        <div id="googlemaps" class="col-sm-7 col-lg-7 col-md-7">
+            <f:format.raw>{googleMaps}</f:format.raw>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-10 col-lg-10 col-md-10">
+        <div id="contactform" class="col-sm-10 col-lg-10 col-md-10 col-md-offset-2 col-sm-offset-2 contactadjust">
             <f:format.raw>{content}</f:format.raw>
         </div>
-    </div>
 </f:section>

@@ -1,0 +1,45 @@
+# Verweis auf diese Datei in der root-Seite, Feld TSconfig
+
+# Laden unserer kopierten und überarbeiteten RTE-default CSS-Datei
+RTE.default.contentCSS = fileadmin/Resources/Public/CSS/default.css
+
+# Der RTE darf die Klassen einer Tabelle zuordnen
+RTE.default.buttons.blockstyle.tags.table.allowedClasses := addToList(table-striped,table-bordered)
+
+# Die Klassen dürfen beim Speichern beibehalten werden
+RTE.default.proc.allowedClasses := addToList(table-striped,table-bordered)
+
+# Formatierungen innerhalb der Auswahlliste (Dropdown) im RTE:
+RTE.classes {
+	table-striped {
+		name = gestreifte Tabelle
+	}
+	table-bordered {
+		name = Standardtabelle
+	}
+	align-justify {
+		name = Blocksatz
+	}
+}
+
+
+# Blockformate entfernen bis auf h3
+RTE.default {
+    buttons.formatblock.removeItems = pre,address,h1,h2,h4,h5,h6,article,blockquote,footer,header,nav,div,aside,section,container,p
+}
+
+
+
+
+#TCEFORM {
+#    pages {
+#        doktype {
+#            removeItems = 255
+#        }
+#    }
+#    tt_content {
+#        header_layout {
+#            altLabels.3 = Zwischenüberschrift
+#        }
+#    }
+#}
