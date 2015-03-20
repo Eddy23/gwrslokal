@@ -29,6 +29,18 @@ RTE.default {
 }
 
 
+RTE.default.buttons {
+	 blockstyle.tags.div.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+     blockstyle.tags.table.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+     textstyle.tags.span.allowedClasses := removeFromList(important, name-of-person, detail)
+}
+
+RTE.default.FE.buttons {
+	 blockstyle.tags.div.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+     blockstyle.tags.table.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+     textstyle.tags.span.allowedClasses := removeFromList(important, name-of-person, detail)
+}
+
 
 
 #TCEFORM {
@@ -43,3 +55,4 @@ RTE.default {
 #        }
 #    }
 #}
+

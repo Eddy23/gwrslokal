@@ -19,11 +19,26 @@ page.RTE.classes {
 page.RTE.default.buttons {
 	 blockstyle.tags.div.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
      blockstyle.tags.table.allowedClasses := removeFromList(csc-frame-frame1, csc-frame-frame2)
+     textstyle.tags.span.allowedClasses := removeFromList(important, name-of-person, detail)
 }
 
 # Überschrift h3 wird umbenannt in Zwischenüberschrift
 page.RTE.default.buttons.formatblock.items.h3.label = Zwischenüberschrift (h3)
 
-#page.TCEFORM.pages {
-#    subtitle.disabled = 1
-#}
+# Backendfelder aus tx_news ausgeblendet
+page.TCEFORM.tx_news_domain_model_news {
+    type.disabled = 1
+    sys_language_uid.disabled = 1
+    istopnews.disabled = 1
+    rte_disabled.disabled = 1
+    content_elements.disabled = 1
+    editlock.disabled = 1
+    tags.disabled = 1
+    fe_group.disabled = 1
+    fal_related_files.disabled = 1
+    related_links.disabled = 1
+    related.disabled = 1
+    related_from.disabled = 1
+    alternative_title.disabled = 1
+    path_segment.disabled = 1
+}

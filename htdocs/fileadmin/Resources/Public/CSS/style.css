@@ -113,11 +113,74 @@ p {
     padding-bottom: 1rem;
 }
 
-.sidebar-nav .navbar-header {
-    float: none;
+/****************************/
+/* Seitennavigation ANFANG  */
+/****************************/
+.sidebar-nav ul {
+    padding-left: 0;
+}
+
+li.sidebarheader {
     font-size: 16px;
     font-size: 1.6rem;
+    padding-left: 10px;
+    padding-left: 1rem;
 }
+
+.sidebarheader ul {
+    padding-left: 0;
+    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    margin-left: -10px;
+    margin-left: -1rem;
+
+}
+
+.nav-pills > li + li {
+    margin-left: 0;
+}
+
+ul.dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: left;
+    list-style: none;
+    background-color: inherit;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+ul.dropdown-menu > li > a {
+    display: block;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    padding: 1rem 2rem;
+    clear: both;
+    line-height: 1.42857143;
+    color: #428BCA;
+    white-space: nowrap;
+}
+
+.nav .open > a:focus {
+    background-color: inherit;
+    border-color: #428bca;
+}
+
+.sidebar-left {
+    padding-left: 0;
+}
+
+/****************************/
+/* Seitennavigation ENDE    */
+/****************************/
+
+
 
 .gwrsheader {
     height:auto;
@@ -218,9 +281,7 @@ article {
 }
 
 
-.sidebar-left {
-    padding-left: 0;
-}
+
 
 .navbar-collapse {
     padding-right: 0;
@@ -661,6 +722,210 @@ p.align-justify {
 }
 
 
+
+/*******************************************/
+/* colorbox Anpassungen BEGINN             */
+/*******************************************/
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#cboxWrapper {
+    max-width: none;
+}
+
+#cboxOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#cboxMiddleLeft, #cboxBottomLeft {
+    clear: left;
+}
+
+#cboxContent {
+    position: relative;
+}
+
+#cboxLoadedContent {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#cboxTitle {
+    margin: 0;
+}
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+    cursor: pointer;
+}
+
+.cboxPhoto {
+    float: left;
+    margin: auto;
+    border: 0;
+    display: block;
+    max-width: none;
+    -ms-interpolation-mode: bicubic;
+}
+
+.cboxIframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#colorbox, #cboxContent, #cboxLoadedContent {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay {
+    background: #000;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+#colorbox {
+    outline: 0;
+}
+
+#cboxContent {
+    margin-top: 20px;
+    background: #000;
+}
+
+.cboxIframe {
+    background: #fff;
+}
+
+#cboxError {
+    padding: 50px;
+    border: 1px solid #ccc;
+}
+
+#cboxLoadedContent {
+    border: 5px solid #000;
+    background: #fff;
+}
+
+#cboxTitle {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: #ccc;
+}
+
+#cboxCurrent {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    color: #ccc;
+}
+
+#cboxLoadingGraphic {
+    background: url(../../../Colorbox/loading.gif) no-repeat center center;
+}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    width: auto;
+    background: none;
+}
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+    outline: 0;
+}
+
+#cboxSlideshow {
+    position: absolute;
+    top: -20px;
+    right: 90px;
+    color: #fff;
+}
+
+#cboxPrevious {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    margin-top: -32px;
+    background: url(../../../Colorbox/controls.png) no-repeat top left;
+    width: 28px;
+    height: 65px;
+    text-indent: -9999px;
+}
+
+#cboxPrevious:hover {
+    background-position: bottom left;
+}
+
+#cboxNext {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -32px;
+    background: url(../../../Colorbox/controls.png) no-repeat top right;
+    width: 28px;
+    height: 65px;
+    text-indent: -9999px;
+}
+
+#cboxNext:hover {
+    background-position: bottom right;
+}
+
+#cboxClose {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    background: url(../../../Colorbox/controls.png) no-repeat top center;
+    width: 38px;
+    height: 19px;
+    text-indent: -9999px;
+}
+
+#cboxClose:hover {
+    background-position: bottom center;
+}
+
+/*******************************************/
+/* colorbox Anpassungen ENDE               */
+/*******************************************/
+
+
+
 /* make sidebar nav vertical */
 @media only screen and (min-width: 768px) {
     .gwrslogo {
@@ -675,18 +940,16 @@ p.align-justify {
         background-color: #ff0000;
     }
 
+/****************************/
+/* Seitennavigation ANFANG  */
+/****************************/
+    a.dropdown-toggle {
+        color: #FFFFFF;
+    }
+
     .sidebar-nav .navbar .navbar-collapse {
         padding: 0;
         max-height: none;
-    }
-
-    .sidebar-nav .navbar ul {
-        float: none;
-    }
-
-
-    .sidebar-nav .navbar ul:not {
-        display: block;
     }
 
     .sidebar-nav .navbar li {
@@ -695,26 +958,72 @@ p.align-justify {
         font-weight: bold;
     }
 
+
+    .sidebar-nav .navbar li.active a {
+        color: #FFFFFF;
+    }
+
+    .sidebar-nav .navbar .dropdown-menu li a {
+        color: #428BCA;
+    }
+
+    .sidebar-nav .navbar .dropdown-menu li.active a {
+        color: #FFFFFF;
+    }
+
     .sidebar-nav .navbar li a {
         padding-top: 4px;
         padding-top: 0.4rem;
         padding-bottom: 4px;
         padding-bottom: 0.4rem;
-        font-size: 15px;
-        font-size: 1.5rem;
+        color: #428BCA;
     }
 
     .sidebar-nav .navbar li a:hover,
     .sidebar-nav .navbar li a:focus {
         outline: none;
         text-decoration: none;
-        color: #d58512;
+        color: #428BCA;
+    }
+
+
+    .sidebar-nav .navbar li a:active {
+        color: #FFFFFF;
+    }
+
+    .sidebar-nav .navbar li a:focus {
+        color: #FFFFFF;
+    }
+
+    .sidebar-nav .navbar li.active {
+        background-color: #3E9B43;
+    }
+
+/*
+    li.sidebarheader ul.nav li.dropdown.active {
+        background-color: #3E9B43;
+    }
+*/
+
+    ul.dropdown-menu {
+        background-color: #FED74F;
+    }
+
+
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+        color: #fff;
+        text-decoration: none;
+        background-color: #3E9B43;
+        outline: 0;
     }
 
     .navbar-nav li ul {
         margin-left: 0;
         padding-left: 0;
     }
+/****************************/
+/* Seitennavigation ENDE    */
+/****************************/
 
     #mainnavi-bar {
         float: right;
@@ -828,6 +1137,24 @@ td, th {
     background-color: #DDDDDD;
 }
 
+@media only screen and (max-width: 991px) {
+    .sidebarheader ul {
+        margin-bottom: 20px;
+        margin-bottom: 2rem;
+        margin-top: 10px;
+        margin-top: 1rem;
+    }
+
+    .sidebar-nav .navbar li {
+        margin-bottom: 10px;
+        margin-bottom: 1rem;
+    }
+
+    ul .dropdown-menu {
+        min-width: inherit;
+    }
+}
+
 
 @media only screen and (max-width: 767px) {
     .gwrslogo {
@@ -874,15 +1201,24 @@ td, th {
 
     .mainnavi li {
         margin: 0;
+        padding-bottom: 8px;
+        padding-bottom: 0.8rem;
+        padding-top: 8px;
+        padding-top: 0.8rem;
         border-bottom: 2px solid #999999;
         border-bottom: 0.2rem solid #999999;
     }
+
+    .mainnavi ul li.active {
+        background-color: #3E9B43;
+    }
+
 
     .mainnavi li a {
         color: #DDDDDD;
     }
 
-    .mainnavi li:hover {
+    .mainnavi li:hover, .mainnavi li a:hover {
         background-color: #AAAAAA;
     }
 
@@ -933,7 +1269,7 @@ td, th {
         top: 0;
         width: 41.6%;
     }
-
+/*
     #sidebar {
         background-color: #3b3b3b;
         padding-top: 0;
@@ -977,6 +1313,7 @@ td, th {
         border-bottom-color: #fff;
     }
 
+*/
     .navbar-collapse {
         margin-left: 0;
         padding-left: 0;
@@ -985,6 +1322,10 @@ td, th {
     .sidebar-left {
         padding-left: 15px;
         padding-left: 1.5rem;
+    }
+
+    .sidebar-nav .navbar li {
+        margin-bottom: 0;
     }
 
     .sidebar-nav ul li {
@@ -1009,25 +1350,32 @@ td, th {
         padding-bottom: 1rem;
     }
 
+    .sidebar-nav ul li ul li.active {
+        background-color: #3E9B43;
+    }
+
     .sidebar-nav ul li ul li a {
         color: #DDDDDD;
         text-decoration: none;
     }
 
-    .sidebar-nav ul li ul li:hover {
+    .sidebar-nav ul li ul li:hover, .sidebar-nav ul li ul li a:hover {
         background-color: #AAAAAA;
     }
 
+
     .sidebar-nav ul li ul li ul {
         background-color: #888888;
-        margin-bottom: -12px;
-        margin-bottom: -1.2rem;
+        margin-bottom: 18px;
+        margin-bottom: 1.8rem;
         margin-left: -15px;
         margin-left: -1.5rem;
         margin-top: 11px;
         margin-top: 1.1rem;
         padding-bottom: 0;
+        width: 103%;
     }
+
 
     .sidebar-nav ul li ul li ul li {
         border-bottom: 2px solid #999999;
@@ -1036,6 +1384,30 @@ td, th {
         padding-top: 0;
         padding-bottom: 0;
     }
+
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+        background-color: #3E9B43;
+    }
+
+    .caret {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid;
+        display: inline-block;
+        height: 0;
+        vertical-align: middle;
+        width: 0;
+    }
+
+    li.sidebarheader {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    li.sidebarheader ul li {
+        text-align: left;
+    }
+
 
     .contact-school {
         text-align: center;

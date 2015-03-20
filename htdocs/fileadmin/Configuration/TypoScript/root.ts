@@ -193,9 +193,9 @@ lib.breadcrumb {
         special = rootline
         # Anzeige ab Ebene 1 bis unendlich
         special.range = 1 | -1
-        # Versteckte Seite "Newsdetail" anzeigen, aber nicht die versteckte Seite uid=10
+        # Versteckte Seite "Newsdetail" anzeigen, aber nicht die versteckte Seite uid=10 und 53
         includeNotInMenu = 1
-        excludeUidList = 10
+        excludeUidList = 10, 53
         1 = TMENU
         1 {
             NO = 1
@@ -233,53 +233,115 @@ lib.metanavi {
 ###########################################
 # Seiten-Navigation                         #
 ###########################################
-lib.sidenavi = HMENU
+lib.sidenavi = COA
 lib.sidenavi {
-    #    special = directory
-    #    special.value = 13
-    entryLevel = 0
-    1 = TMENU
-    1 {
-        expAll = 0
-        collapse = 0
-        wrap = <ul class="nav navbar-nav"> | </ul>
-        NO {
-            wrapItemAndSub = <li> | </li>
-            stdWrap.htmlSpecialChars = 1
-            stdWrap.htmlSpecialChars.preserveEntities = 1
-        }
 
-        ACT < .NO
-        ACT = 1
-        ACT {
-            wrapItemAndSub = <li> | </li>
-        }
+    20 = HMENU
+    20 {
+        special = directory
+        special.value = 53
 
-        IFSUB = 1
-        IFSUB {
-            wrapItemAndSub = <li>| </li>
-            doNotLinkIt = 1
-            stdWrap.cObject = TEXT
-            stdWrap.cObject.value =
-            before.stdWrap.cObject = TEXT
-            before.stdWrap.cObject {
-                field = title
-#                dataWrap = <a data-toggle="collapse" data-target="#testcollapse" href=#>|<span class="caret"></span></a>
-                dataWrap = <button data-toggle="collapse" data-target="#testcollapse">|<span class="caret"></span></button>
+        1 = TMENU
+        1 {
+            expAll = 1
+            wrap = <ul> | </ul>
+
+            NO = 1
+            NO {
+                wrapItemAndSub = <li class="sidebarheader">|</li>
+                stdWrap.htmlSpecialChars = 1
+                doNotLinkIt = 1
             }
         }
 
-        ACTIFSUB < .IFSUB
-        ACTIFSUB {
-            wrapItemAndSub = <li class="active">|</li>
-        }
-    }
+        2 = TMENU
+        2 {
+            expAll = 1
 
-    2 < .1
-    2.collapse = 0
-    2.wrap = <ul id="testcollapse" class="nav collapse"> | </ul>
-    2.NO {
-        wrapItemAndSub = <li> | </li>
+            NO {
+                allWrap = <li>|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            ACT = 1
+            ACT {
+                wrapItemAndSub = <li class="active">|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            IFSUB = 1
+            IFSUB {
+                before = <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                after = <b class="caret"></b></a>
+                doNotLinkIt = 1
+                wrapItemAndSub = <li class="dropdown">|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            ACTIFSUB = 1
+            ACTIFSUB {
+                before = <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                after = <b class="caret"></b></a>
+                doNotLinkIt = 1
+                wrapItemAndSub = <li class="dropdown active">|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            wrap = <ul class="nav">|</ul>
+        }
+
+        3 = TMENU
+        3 {
+            expAll = 1
+
+            ACT = 1
+            ACT {
+                wrapItemAndSub = <li class="active">|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            ACTIFSUB = 1
+            ACTIFSUB {
+                wrapItemAndSub = |
+                before = <li class="divider"></li><li class="nav-header">
+                after = </li>
+                doNotLinkIt = 1
+                ATagTitle.field = abstract // description // title
+            }
+
+            NO {
+                allWrap = <li>|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            IFSUB = 1
+            IFSUB {
+                before = <li class="divider"></li><li class="nav-header">
+                after = </li>
+                doNotLinkIt = 1
+                ATagTitle.field = abstract // description // title
+            }
+
+            SPC = 1
+            SPC.allWrap = <li class="divider"></li><li class="nav-header">|</li>
+
+            wrap = <ul class="dropdown-menu">|</ul>
+        }
+
+        4 = TMENU
+        4 {
+            NO {
+                allWrap = <li>|</li>
+                ATagTitle.field = abstract // description // title
+            }
+
+            ACT = 1
+            ACT {
+                wrapItemAndSub = <li class="active">|</li>
+                ATagTitle.field = abstract // description // title
+            }
+        }
+
     }
 }
 
@@ -473,9 +535,17 @@ page {
         jquery.external = 1
         jquery.forceOnTop = 1
         file1 = fileadmin/Resources/Public/Bootstrap/js/bootstrap.js
-#        file2 = fileadmin/Resources/Public/Js/navitoggle.js
         file3 = fileadmin/Resources/Public/Js/removepillsnav.js
-#        file4 = fileadmin/Resources/Public/Js/imagefade.js
+        file4 = fileadmin/Resources/Public/Js/jquery.colorbox-min.js
+#        file4 = fileadmin/Resources/Public/Js/jquery.colorbox.js
+        file5 = fileadmin/Resources/Public/Js/dontCollapseParent.js
+    }
+
+    jsFooterInline {
+        10 = COA
+        10.wrap = $(document).ready(function(){|});
+        10.10 = TEXT
+        10.10.value = $(".lightbox").colorbox();
     }
 
     10 = CASE
@@ -483,7 +553,7 @@ page {
         key.field = backend_layout
         key.ifEmpty.data = levelfield:-2, backend_layout_next_level, slide
         default = TEXT
-        default.value = Bitte Backend-layout auswählen!
+        default.value = Bitte Backend-Layout auswählen!
         1 < tmpl.einspaltig
         2 < tmpl.zweispaltig
         3 < tmpl.startseite
